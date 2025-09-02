@@ -5,9 +5,9 @@ from flask import make_response
 
 def create_produto(produto_data):
     novo_produto = produto(
-        modelo=produto_data['modelo'],
-        marca=produto_data['marca'],
-        ano=produto_data['ano']
+        nome=produto_data['nome'],
+        categoria=produto_data['categoria'],
+        preco=produto_data['preco']
     )
 
     db.session.add(novo_produto)
